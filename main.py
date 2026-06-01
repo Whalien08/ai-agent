@@ -23,7 +23,7 @@ def main():
         print("I need a prompt")
         sys.exit(1)
 
-    # FIX 1: Define verbose_flag with a default value so it always exists
+    # Define verbose_flag with a default value so it always exists
     verbose_flag = False
     if len(sys.argv) == 3 and sys.argv[2] == "--verbose":
         verbose_flag = True
@@ -37,12 +37,11 @@ def main():
     )
     print("\nAI Response:", response.text)
     
-    # FIX 2: Safe Pythonic check to ensure response and metadata are valid
+    #Safe Pythonic check to ensure response and metadata are valid
     if not response or not response.usage_metadata:
         print("Error: Response is malformed or missing metadata.")
         return
-    
-    # This will now run perfectly whether you use --verbose or not!
+
     if verbose_flag:
         print("\n[Token Metrics]")
         print(f"  User Prompt:     {prompt}")
