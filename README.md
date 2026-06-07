@@ -1,4 +1,4 @@
-# AI Coding Agent 🚀
+# AI Coding Agent 
 
 An autonomous, terminal-based AI Coding Agent engineered for the **Elite Coders Open Source Hackathon 2026**. This intelligent system is designed to inspect local multi-directory codebases, structurally parse logical files, execute scripts to analyze error streams, and automatically deploy functional patches using a closed-loop agentic workflow.
 
@@ -42,21 +42,18 @@ To avoid unpredictable file modification behavior, the system implements a stric
 ## 📦 Getting Started & Verification
 
 ### 1. Setup Instructions
-Ensure your Google AI Studio credentials are securely configured inside a local environment file:
-```bash
-# Create and populate your secret token file
-echo "GEMINI_API_KEY=your_actual_api_key_here" > .env
+Ensure your Google AI Studio credentials are securely configured inside a local environment file. 
+Create a file named .env and add this line:
+GEMINI_API_KEY=your_actual_api_key_here
 
-2. Installation & Launch
-
+### 2. Installation & Launch
 Activate your sandbox workspace and execute a project query directly via the terminal:
-Bash
 
-# Run a live diagnostics/patching prompt with real-time telemetry tracing
 python main.py "Fix the bug in the calculator. Run test.py to see what fails, identify the bug, overwrite the broken file to patch it, and confirm the fix runs successfully." --verbose
 
-📜 Project Showcase: Sample Execution Log
-Plaintext
+---
+
+## 📜 Project Showcase: Sample Execution Log
 
 Agent engine initialized. Executing task loop...
 
