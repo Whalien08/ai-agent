@@ -27,7 +27,7 @@ def main():
     verbose_flag = "--verbose" in sys.argv
         
     client = genai.Client()
-    working_dir = "calculator"
+    working_dir = "sensor_app"
     
     # Define our manual mappings to execute functions during tool calls
     tool_map = {
@@ -108,7 +108,7 @@ def main():
     
     max_iterations = 15
     for iteration in range(max_iterations):
-        time.sleep(5)
+        time.sleep(15)
         response = client.models.generate_content(
             model='gemini-2.5-flash',
             contents=messages,

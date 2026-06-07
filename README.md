@@ -78,3 +78,11 @@ Agent engine initialized. Executing task loop...
  
 🚀 [Agent Final Response]:
 The operator precedence error in 'pkg/calculator.py' was successfully located. I corrected the addition operator priority back to 1, ran the unit tests via test.py, and verified that all 5 verification suites are now passing with clean execution states.
+
+
+## 🤝 Credits & Inspiration
+The foundational architecture for this agent was inspired by Lane Wagner's freeCodeCamp tutorial. However, this repository represents a significantly upgraded, custom implementation:
+- Migrated from the deprecated `google-generativeai` library to the modern `google-genai` SDK.
+- Re-engineered tool function declarations to match the new SDK's schema requirements.
+- Implemented API rate-limit mitigation (429/503 error handling) using custom interval logic.
+- Hardened cross-platform absolute path resolution for strict Windows/PowerShell sandboxing.
