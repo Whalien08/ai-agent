@@ -123,7 +123,7 @@ def main():
         
         # If the model didn't ask for a tool, it has provided its final text explanation!
         if not function_calls:
-            print(f"\n🚀 [Agent Final Response]:\n{response.text}")
+            print(f"\n[Agent Final Response]:\n{response.text}")
             break
             
         # If it generated function actions, append the model's message choice to context history
